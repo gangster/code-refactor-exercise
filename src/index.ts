@@ -2,27 +2,13 @@ import { ExecuteStandardPTOperationsParamsSchema } from './schemas'
 import type { DB } from './db/types'
 
 import {
-  type IdObject,
-  type PromotionInformation,
-  type UserPurchaseInformation,
-  PaymentMethod
+  type IdObject, PaymentMethod,
+  type ExecuteStandardPTOperationsParams
 } from './types'
 
 // Dependencies required for executing standard PT operations.
 interface Dependencies {
   db: DB
-}
-
-// Type definition for the parameters required to execute standard PT operations.
-export type ExecuteStandardPTOperations = (
-  params: ExecuteStandardPTOperationsParams
-) => Promise<IdObject>
-
-// Parameters required for standard PT operations, including user and promotion information, and a transaction ID.
-export interface ExecuteStandardPTOperationsParams {
-  userPurchaseInformation: UserPurchaseInformation
-  promotionInformation: PromotionInformation
-  sqlTransactionId: string
 }
 
 /**

@@ -22,18 +22,15 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
 
-    # Add the npm ci step here, before ESLint
     - name: Install Node.js dependencies
       run: npm ci
 
-    # Add the ESLint step here
     - name: Run ESLint
       run: npm run lint
 
-    - run: npm test
-
-  coverage:
-      runs-on: ubuntu-latest
-      steps:
-          - uses: actions/checkout@v3
-          - uses: ArtiomTr/jest-coverage-report-action@v2
+    - name: Run tests
+      run: npm run test-ci
+    - name: Generate coverage badges
+      uses: jpb06/jest-badges-action@latest
+      with:
+        branches: main

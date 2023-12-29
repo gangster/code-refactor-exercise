@@ -6,6 +6,7 @@
   "scripts": {
     "lint": "eslint . --ext .ts",
     "test": "DATABASE=test SECRET_ARN=test CLUSTER_ARN=test jest",
+    "test-ci": "DATABASE=test SECRET_ARN=test CLUSTER_ARN=test  jest --ci --coverage",
     "docs": "typedoc --exclude \"**/*+(.test).ts\" --entryPointStrategy expand ./src"
   },
   "author": "",

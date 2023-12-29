@@ -1,3 +1,9 @@
+![Branches](./badges/coverage-branches.svg)
+![Functions](./badges/coverage-functions.svg)
+![Lines](./badges/coverage-lines.svg)
+![Statements](./badges/coverage-statements.svg)
+![Jest coverage](./badges/coverage-jest%20coverage.svg)
+
 # Code Refactor Exercise
 
 ## Project Summary
@@ -47,27 +53,3 @@ This project entailed a comprehensive refactor of the `executeStandardPTOperatio
 - **Automated Testing**: Continuous quality checks and prevention of regression errors.
 - **Performance Optimization**: Focused on database interaction efficiency and response times.
 - **Scalability Considerations**: Modular and abstracted design for easy scaling and modifications.
-
-## Test Coverage
-Detailed coverage results indicate extensive testing:
-
-```shell
--------------|---------|----------|---------|---------|-------------------
-File         | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
--------------|---------|----------|---------|---------|-------------------
-All files    |     100 |      100 |     100 |     100 |                   
- src         |     100 |      100 |     100 |     100 |                   
-  helpers.ts |     100 |      100 |     100 |     100 |                   
-  index.ts   |     100 |      100 |     100 |     100 |                   
-  schemas.ts |     100 |      100 |     100 |     100 |                   
- src/db      |     100 |      100 |     100 |     100 |                   
-  index.ts   |     100 |      100 |     100 |     100 |                   
-  schemas.ts |     100 |      100 |     100 |     100 |                   
- src/types   |     100 |      100 |     100 |     100 |                   
-  index.ts   |     100 |      100 |     100 |     100 |                   
--------------|---------|----------|---------|---------|-------------------
-Test Suites: 3 passed, 3 total
-Tests:       25 passed, 25 total
-Snapshots:   0 total
-Time:        4.699 s, estimated 5 s
-```
